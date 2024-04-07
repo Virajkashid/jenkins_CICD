@@ -1,34 +1,31 @@
 pipeline {
     agent any
-
     stages {
-        stage('Pull') {
+        stage('pull') {
             steps {
-            git branch: 'main', url: 'https://github.com/Virajkashid/jenkins_CICD.git'
-                echo 'Here we are pullin our project repository'
+                git branch: 'main', credentialsId: 'ssh', url: 'https://github.com/krishnadale007/jenkins.git'
+                echo 'pull'
             }
         }
-        stage('Build') {
+        stage('build') {
             steps {
-                sh '/opt/apache-maven-3.9.6/bin/mvn clean package'
-                echo 'Here we doing build operation'
+                echo 'build done'
             }
         }
-        stage('Test') {
+        stage('quality-test') {
             steps {
-                echo 'Here we are testing '
+                echo 'quality-test'
             }
         }
-        stage('Quality Test') {
+        stage('test') {
             steps {
-                echo 'Here we are testing the quality'
+                echo 'test done'
             }
         }
-        stage('Deploy') {
+        stage('deploy') {
             steps {
-                echo 'Deploy Done'
+                echo 'deploy done'
             }
-        
         }
     }
 }
