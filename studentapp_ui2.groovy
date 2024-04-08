@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pull') {
             steps {
-                git '/Virajkashid/jenkins_CICD/blob/main/studentapp_ui2.groovy'
+                git 'studentapp_ui2.groovy'
                 echo 'Here we are pullin our project repository'
             }
         }
