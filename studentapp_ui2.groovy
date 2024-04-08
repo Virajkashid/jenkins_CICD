@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pull') {
             steps {
-                git 'https://github.com/chetansomkuwar254/studentapp.ui.git'
+                git ''
                 echo 'Here we are pullin our project repository'
             }
         }
