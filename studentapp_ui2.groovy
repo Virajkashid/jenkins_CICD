@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pull') {
             steps {
-                git 'git branch: 'main', url: 'https://github.com/Virajkashid/jenkins_CICD''
+                git 'https://github.com/Virajkashid/jenkins_CICD''
                 echo 'Here we are pullin our project repository'
             }
         }
