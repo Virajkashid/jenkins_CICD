@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Pull') {
             steps {
-                git 'githubstudentapp_ui2.groovy'
+                git ''
                 echo 'Here we are pullin our project repository'
             }
         }
